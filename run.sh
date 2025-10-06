@@ -40,12 +40,23 @@ touch input.txt output.txt
 if [ $? -eq 0 ]; then
     echo "[STEP] Running the program"
 
+    # Start timing
+    start_time=$(date +%s%N)
+
     # Run with input file if it exists, otherwise use stdin
     if [ -f "input.txt" ]; then
         ./main < input.txt > output.txt
     else
         ./main > output.txt
     fi
+
+    # End timing
+    end_time=$(date +%s%N)
+    elapsed=$((end_time - start_time))
+    elapsed_us=$((elapsed / 1000))
+    elapsed_ms=$((elapsed / 1000000))
+
+    echo "[TIME] Execution time: ${elapsed_ms}ms (${elapsed_us}µs)"
 
     # Clean up - delete the executable
     rm -f main
