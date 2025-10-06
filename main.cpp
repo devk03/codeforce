@@ -27,16 +27,16 @@ const ll LINF = 1e18;
 
 void solve()
 {
-    freopen("output.txt", "w", stdout);
-    int t = 0;
-    t << cin;
-    for (int i=0; i<t; i++){ // number of tests
-
-    }
+    // Solution code here
 }
 
 int main()
 {
+    #ifdef DEBUG
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
