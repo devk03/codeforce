@@ -15,10 +15,12 @@ This directory contains a streamlined setup for competitive programming in C++, 
 1. **Write your solution** in `main.cpp` inside the `solve()` function
 2. **Add test input** to `input.txt`
 3. **Compile and run** using `./run.sh`
+4. **Archive a solution** using `./run.sh -n`
 
 ## Usage
 
 ### Basic Workflow
+
 ```bash
 # Edit your solution
 vim main.cpp
@@ -33,6 +35,7 @@ vim main.cpp
 ### Template Features
 
 The `main.cpp` template includes:
+
 - Fast I/O setup (`ios_base::sync_with_stdio(false)`)
 - Common competitive programming headers (`#include <bits/stdc++.h>`)
 - Useful macros and typedefs:
@@ -47,6 +50,7 @@ The `main.cpp` template includes:
 ### Multiple Test Cases
 
 For problems with multiple test cases, uncomment this line in `main.cpp`:
+
 ```cpp
 cin >> t;  // Uncomment for multiple test cases
 ```
@@ -54,6 +58,7 @@ cin >> t;  // Uncomment for multiple test cases
 ### Compilation Options
 
 The compile script uses these flags:
+
 - `-std=c++17` - C++17 standard
 - `-O2` - Optimization level 2
 - `-Wall -Wextra -pedantic` - Enable warnings
@@ -68,12 +73,14 @@ The compile script uses these flags:
 ## Example Problem
 
 The sample `input.txt` contains:
+
 ```
 5
 1 2 3 4 5
 ```
 
 You could solve this by finding the sum:
+
 ```cpp
 void solve() {
     int n;
