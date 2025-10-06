@@ -23,13 +23,16 @@ This directory contains a streamlined setup for competitive programming in C++, 
 
 ```bash
 # Edit your solution
-vim main.cpp
+code main.cpp
 
 # Test with sample input
 ./run.sh
 
 # Just compile (without running)
 ./compile.sh
+
+# Archive a soluton
+./run.sh -n
 ```
 
 ### Template Features
