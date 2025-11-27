@@ -39,12 +39,17 @@ run: compile
 	elapsed_us=$$((elapsed / 1000)); \
 	elapsed_ms=$$((elapsed / 1000000)); \
 	echo "[TIME] Execution time: $${elapsed_ms}ms ($${elapsed_us}µs)"; \
-	$(MAKE) clean
+	rm -f $(TARGET); \
+	echo "[STEP] Executable cleaned up."
 
-# Clean up executable
+# Clean up executable and reset files
 clean:
 	@rm -f $(TARGET)
 	@echo "[STEP] Executable cleaned up."
+	@cp config/template.cpp $(SOURCE)
+	@echo "[STEP] Reset $(SOURCE) from template"
+	@> $(INPUT)
+	@echo "[STEP] Cleared $(INPUT)"
 
 # Create new solution: save current main.cpp and reset from template
 new:
