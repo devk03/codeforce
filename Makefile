@@ -50,6 +50,8 @@ clean:
 	@echo "[STEP] Reset $(SOURCE) from template"
 	@> $(INPUT)
 	@echo "[STEP] Cleared $(INPUT)"
+	@> $(OUTPUT)
+	@echo "[STEP] Cleared $(OUTPUT)"
 
 # Create new solution: save current main.cpp and reset from template
 new:
