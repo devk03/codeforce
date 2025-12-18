@@ -55,7 +55,7 @@ void solve()
 
     vector<int> anss(2 * n + 2, 2 * n + 1); // intialize with value higher than any 1,...,2n
 
-    int pref_mn = a[0][0];
+    int pref_mn = a[0][0];1
     int pref_mx = a[0][0];
     for (int j = 0; j < n; j++)
     { // iterating through all the possible paths <-bijection-> switch points bijection
